@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background-color: #eee;
+    margin: 0 auto;
+    width: 90%; /* Hacer el formulario más responsive */
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+input {
+    border: solid 0;
+    border-radius: 3px;
+}
+
+input[type=text],
+input[type=password] {
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #1E69E3;
+    color: white;
+    padding: 8px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.center {
+    text-align: center;
+}
+
+.opcion {
+    padding: 5px 0;
+}
+
+.barra {
+    background-color: rgb(152, 196, 236);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.seleccionado {
+    background-color: rgb(33, 90, 143);
+    border-radius: 4px;
+    color: rgb(170, 14, 14);
+    padding: 10px;
+}
+
+#menu {
+    background-color: #eee;
+    padding: 10px;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex; /* Cambiado a flexbox para mejor manejo en dispositivos pequeños */
+    justify-content: space-around; /* Alineación de elementos */
+    align-items: center;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+#menu ul li a {
+    color: #1E69E3;
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    color: rgb(227, 109, 30);
+    text-decoration: none;
+}
+
+.cerrar-sesion {
+    float: right;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+/* Media query para ajustar el menú en dispositivos más pequeños */
+@media screen and (max-width: 600px) {
+    #menu ul {
+        flex-direction: column; /* Cambia la dirección de la fila a columna */
+        text-align: center;
+    }
+}
