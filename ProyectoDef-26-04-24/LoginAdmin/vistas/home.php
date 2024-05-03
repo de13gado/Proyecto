@@ -12,7 +12,7 @@
         <ul>
             <li>Home</li>
             <li class="Calendario">
-                <a href="eventos">Calendario</a>
+                <a href="../eventos">Calendario</a>
             </li>
             <li class="cerrar-sesion">
                 <a href="includes/logout.php">Cerrar sesión</a>
