@@ -1,7 +1,7 @@
 :root{
-	--blue: #659DB4;
+	--blue: hsl(197, 34%, 55%);
 	--lightblue: #CFDDE2;
-	--beige: #F3EEE7;
+	--beige: hsl(35, 33%, 93%);
 	--white: #FFFFFF;
 
 }
@@ -261,6 +261,15 @@ img#img_tratamiento_QS {
     align-self: center;
     margin-top: 86px;
     max-width: 510px;
+}
+
+/*NuestrosProfesionales*/
+
+.NuestrosProfesionales{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 
@@ -818,7 +827,7 @@ input[type="submit"]:hover {
 
 	.gallery{
 		display: flex;
-        background-color: var(--blue);
+        background-color: var(--beige);
         max-width: 100%;
         text-align: center;
         margin: auto 0;
@@ -862,17 +871,22 @@ input[type="submit"]:hover {
     }
 
 	/*FORM*/
-	/* .Form {
-		align-items: center;
+	.Form {
+		background-color: var(--blue);
+	} 
 
-	} */
+	#Form-contacto{
+		color: var(--beige);
+	}
 
 	.form-div_1 {
 		display: flex;
 		gap: 20px;
 		margin: 40px;
 		justify-content: center;
-		
+	}
+	label{
+		color: var(--beige);
 	}
 
 	.form-column {
@@ -897,12 +911,17 @@ input[type="submit"]:hover {
 		justify-content: center;
 		align-items: center;
 	}
-
+	#boton_formulario{
+		background-color: hsl(197, 77%, 36%);
+	}
+	option{
+		background-color: var(--beige);
+	}
 
 	/*FOOTER*/
 
 	.footer-container{
-	    background-color: var(--blue);
+	    background-color: var(--beige);
 		max-width: 100%;
 		text-align: center;
 		margin: auto 0;
@@ -914,7 +933,7 @@ input[type="submit"]:hover {
 		align-content: center;
 		width: 100%;
 		align-items: center;
-		color: var(--beige);
+		color: var(--blue);
 	}
 	.footer-logo img{
 		width: 14.625rem;
