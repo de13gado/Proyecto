@@ -13,17 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hora = $_POST['hora'];
     $mensaje = $_POST['mensaje'];
 
-    // Define las variables para el correo de confirmación
-    $nombre_cliente = $nombre;
-    $apellido1_cliente = $apellido1;
-    $apellido2_cliente = $apellido2;
-    $correo_cliente = $correo;
-    $telefono_cliente = $telefono;
-    $servicio_cliente = $servicio;
-    $dia_cliente = $dia;
-    $hora_cliente = $hora;
-    $mensaje_cliente = $mensaje;
-
     try {
         $conn = new PDO("mysql:host=$servername;dbname=Proyecto", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -40,13 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $conn->exec($sql_cliente);
 
-        // Insertar datos en la tabla de servicios
-        $sql_servicio = "INSERT INTO servicios (nombre, apellido1, apellido2, servicio_deseado, descripcion)
-        VALUES ('$nombre', '$apellido1', '$apellido2', '$servicio', '$mensaje')";
+        // Insertar datos en la tabla de evento
+        $title = $nombre . " " . $apellido1 . " " . $apellido2;
+        $color = '#' . dechex(rand(0x000000, 0xFFFFFF));
 
-        $conn->exec($sql_servicio);
+        $sql_evento = "INSERT INTO evento (title, start, color)
+        VALUES ('$title', '$dia', '$color')";
 
-        // Aquí debes obtener el ID del servicio seleccionado (puedes hacerlo a través de una consulta SQL) y luego insertarlo en la tabla de servicio.
+        $conn->exec($sql_evento);
 
         // Luego, puedes incluir confirmacion.php para mostrar la confirmación al usuario
         include("confirmacion.php");
