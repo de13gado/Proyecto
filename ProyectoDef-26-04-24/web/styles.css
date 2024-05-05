@@ -206,6 +206,9 @@ img#img_tratamiento_depilacion {
 table.precios_tratamiento_depilacion{
 	display: none;
 }
+.oferta_depilacion {
+	padding-bottom: 2rem;
+}
 
 /*Quienes somos*/
 section.sct_Quienes_somos {
@@ -280,7 +283,7 @@ img#img_tratamiento_QS {
 	display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .NuestrosProfesionales{
@@ -296,6 +299,37 @@ img#img_tratamiento_QS {
 .gallery{
 	display: none;
 }
+
+.galleryPC{
+    background-color:#fdf7ed ;
+    padding-top: 20px;
+}
+.titulo{
+	display: flex;
+    align-items: center;
+    color: var(--blue);
+    align-content: center;
+    flex-direction: column;
+}
+.galleryPC_img{
+    display: flex;
+    width: auto;
+    height: 430px;
+    padding: 20px;
+  }
+.galleryPC_img img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    
+    transition: .5s ease;
+  }
+.galleryPC_img img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
 
 
 
@@ -716,6 +750,9 @@ input[type="submit"]:hover {
 	.top-div{
 		display: none;
 	}
+	.bottom {
+		display: none;
+	}
 
 	.Trat_depilacion {
         background-color: var(--blue);
@@ -790,6 +827,7 @@ input[type="submit"]:hover {
 		padding: 3.5rem 0;
 		line-height: normal;
 	}
+	
 
 	/*Quienes somos*/
 
@@ -840,6 +878,9 @@ input[type="submit"]:hover {
 		margin: 21px 0 3rem 0;
 		/* max-width: 510px; */
 		width: 70vw;
+	}
+	.img_text_QS{
+		display: none;
 	}
 	
 	p#parrafo-QS {
