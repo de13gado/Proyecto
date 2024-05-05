@@ -2,7 +2,7 @@
 
 class DB {
     // Definir constantes para la configuración de la base de datos
-    const HOST = 'localhost:3307';
+    const HOST = 'localhost:3306';
     const DB_NAME = 'Proyecto';
     const USER = 'root';
     const PASSWORD = "";
