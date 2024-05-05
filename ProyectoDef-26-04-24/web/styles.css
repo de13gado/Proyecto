@@ -180,14 +180,21 @@ img#img_tratamiento_pelu {
     width: auto;
 }
 
+
+/*Depilaciones*/
 .Trat_depilacion {
     background-color: var(--beige);
     color: var(--blue);
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+	flex-wrap: wrap;
+    align-content: center;
 }
 
-/*Depilaciones*/
+
 .img_text-depilacion{
-    display: flex;
+    display: none;
     flex-direction: column;
     line-height: normal;
     width: 50%;
@@ -196,23 +203,28 @@ img#img_tratamiento_pelu {
 img#img_tratamiento_depilacion {
     display: none;
 }
-
+table.precios_tratamiento_depilacion{
+	display: none;
+}
 
 /*Quienes somos*/
 section.sct_Quienes_somos {
     background: var(--blue);
     width: 100%;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    /* margin: 62px 0 40px; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 69vh;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 .Trat_QS {
     display: flex;
-    gap: 20px;
+	width: 100%;
 }
 .img_text_QS {
-    display: none;
+    display: flex;
     flex-direction: column;
     line-height: normal;
     width: 50%;
@@ -226,7 +238,6 @@ img#img_tratamiento_QS {
     overflow: hidden;
     flex-grow: 1;
 	height: 510px;
-    margin: 45px 0;
 }
 .box-text_QS {
     display: none;
@@ -272,12 +283,21 @@ img#img_tratamiento_QS {
     margin-bottom: 2rem;
 }
 
+.NuestrosProfesionales{
+	background-color: var(--beige);
+	
+}
+.card__image{
+	background-color: var(--blue) !important;
+}
 
 /*GALERIA*/
 
 .gallery{
 	display: none;
 }
+
+
 
 
 
@@ -691,8 +711,11 @@ input[type="submit"]:hover {
 		width: 100%;
 	  }
 
-
 	  /*Depilaciones*/
+
+	.top-div{
+		display: none;
+	}
 
 	.Trat_depilacion {
         background-color: var(--blue);

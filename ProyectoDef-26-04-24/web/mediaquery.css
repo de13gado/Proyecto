@@ -1,0 +1,31 @@
+@media(max-width: 450px) {
+    .wrapper{
+        display: grid;
+        height: 100%;
+        width: 50%;
+        display: grid;
+
+    }
+
+    .bottom .wrapper{
+        display: grid;
+    
+}
+
+.card{
+    margin: 1rem; 
+    padding: 2rem 2rem;
+    display: grid;
+}
+
+.card.left, .card.right{
+    height: 400px;
+    width: 300px;
+}
+
+.card.center{
+    width: 272px;
+    margin-left: 1.9rem;
+}
+
+}
