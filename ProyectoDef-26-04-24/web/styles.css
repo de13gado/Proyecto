@@ -7,7 +7,7 @@
 }
 @font-face {
 	font-family: 'Ilyas';
-	src: url('E:/Copia_Photoshop/FUENTES/Ilyas.otf') format('opentype');
+	src: url('Ilyas.otf') format('opentype');
 	
 }
 
@@ -149,30 +149,71 @@ header{
     color: var(--beige);
     font-size: 1.8rem;
 }
+.box-text {
+    padding: 0 0 15px 0;
+}
+.img_text {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
 
 .Trat_corp {
     display: flex;
-    height: 50vh;
+    height: auto;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
     align-items: center;
     justify-content: space-evenly;
+	padding: 2rem 0 0 0;
 }
 
+
+tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+td {
+    padding: 5px 25px 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
 img#img_tratamiento_corp {
     width: auto;
     height: 250px;
 }
 
+
+.linea {
+	border-top: 1px solid black;
+	height: 2px;
+	max-width: 200px;
+	padding: 0;
+	margin: 50px auto 50px auto;
+	background-color: var(--beige);
+  }
+  
+
 .Trat_peluquería {
     display: flex;
-    height: 50vh;
+    height: auto;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     align-content: stretch;
     align-items: center;
     justify-content: space-evenly;
+	padding: 0 0 2rem 0;
+}
+.box-text_pelu{
+    padding: 0 0 15px 0;
+}
+.img_text-peluqueria {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
 img#img_tratamiento_pelu {
@@ -223,6 +264,7 @@ section.sct_Quienes_somos {
     justify-content: space-around;
     align-items: center;
 	height: auto;
+	padding: 2rem 0;
 }
 .Trat_QS {
     display: flex;
@@ -303,13 +345,13 @@ img#img_tratamiento_QS {
 }
 
 .galleryPC{
-    background-color:#fdf7ed ;
-    padding-top: 20px;
+    background-color: var(--blue) ;
+	padding: 2rem 0;
 }
 .titulo{
 	display: flex;
     align-items: center;
-    color: var(--blue);
+    color: var(--beige);
     align-content: center;
     flex-direction: column;
 }
@@ -438,7 +480,6 @@ select#hora {
 }
 
 textarea#mensaje {
-	width: 96%;
 	padding: 8px;
 	margin-bottom: 10px;
 	border: 1px solid var(--blue);
@@ -464,8 +505,8 @@ input[type="submit"]:hover {
 /* Estilo del pie de página */
 .footer-container {
     display: flex;
-    background-color: #fdf7ed;
-    color: #555;
+    background-color: var(--blue);
+    color: var(--beige);
     padding: 20px 20px;
     text-align: center;
     align-content: center;
@@ -523,6 +564,16 @@ input[type="submit"]:hover {
   }
 /* Estilos para pantallas más grandes (ejemplo: tablet o escritorio) */
 
+
+@media screen and (min-width: 768px) and (max-width: 963px) {
+	.bottom .wrapper {
+	overflow-x: clip;
+	}
+	/* .linea{
+		display: none;
+	} */
+}
+  
 
 @media(max-width: 768px){
 	/* HEADER */
@@ -618,6 +669,10 @@ input[type="submit"]:hover {
 
 	/*TRATAMIENTOS*/
 	
+	.linea{
+		display: none;
+	}
+
 	.inner-container-trat {
 		max-width: 100%;
 		text-align: center;
@@ -637,6 +692,13 @@ input[type="submit"]:hover {
 		display: inline-block;
 		padding: 2.5rem 0;	
 
+	}
+	tr {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.img_text {
@@ -681,9 +743,9 @@ input[type="submit"]:hover {
 		padding: 5px 10px;
 	}
 
-	.precios_tratamiento_corp td {
+	/* .precios_tratamiento_corp td {
 		width: 100%;
-	  }
+	  } */
 
 
 	/*Peluquería*/
@@ -742,9 +804,9 @@ input[type="submit"]:hover {
 		padding: 5px 10px;
 	}
 
-	.precios_tratamiento_pelu td {
+	/* .precios_tratamiento_pelu td {
 		width: 100%;
-	  }
+	  } */
 
 	  /*Depilaciones*/
 
@@ -815,9 +877,9 @@ input[type="submit"]:hover {
 	padding: 5px 10px;
 	}
 
-	.precios_tratamiento_depilacion td {
+	/* .precios_tratamiento_depilacion td {
 		width: 100%;
-	}
+	} */
 
 	table.precios_tratamiento_depilacion{
 		display: flex;
@@ -829,7 +891,7 @@ input[type="submit"]:hover {
 		align-content: center;
 		justify-content: center;
 		gap: 10px;
-		align-items: center;
+		align-items: stretch;
 	}
 
 	.oferta_depilacion {
