@@ -5,6 +5,9 @@
 	--white: #FFFFFF;
 
 }
+html {
+    scroll-behavior: smooth;
+}
 @font-face {
 	font-family: 'Ilyas';
 	src: url('Ilyas.otf') format('opentype');
@@ -336,6 +339,9 @@ img#img_tratamiento_QS {
 }
 .card__image{
 	background-color: var(--blue) !important;
+}
+h3#NuestrosProfesionales_txt {
+    color: var(--blue);
 }
 
 /*GALERIA*/
